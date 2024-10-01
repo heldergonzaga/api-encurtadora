@@ -1,6 +1,4 @@
 import { CreateEncurtadoraDTO } from 'src/dto/CreateEncurtadora';
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export abstract class EncurtadoraRepository {
   abstract create(term_origin: string, term_target: string): Promise<void>;
   abstract findOne(term_origin: string): Promise<void>;

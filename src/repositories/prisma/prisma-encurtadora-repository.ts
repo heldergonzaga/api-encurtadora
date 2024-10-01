@@ -59,13 +59,9 @@ export class PrismaEncurtadoraRepository implements EncurtadoraRepository {
     });
   }
 
-
-
   async findAll() {
     return this.prisma.encurtadora.findMany();
   }
-
-  
 
   async remove(id: string) {
     const _encExists = await this.prisma.encurtadora.findUnique({

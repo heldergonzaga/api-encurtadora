@@ -83,3 +83,24 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+https://jsonplaceholder.typecode.com/users
+
+@Injectable()
+export class UserService {
+  async getUsers() {
+    const data = await fetch('https://jsonplaceholder.typicode.com/users', {
+      method: 'get',
+    });
+    const json_data = await data.json();
+    return json_data;
+  }
+}
+
+
+npm i cache-manager-redis-store
+
+acl setuser redis >rootRedis on allchannels allkeys +get +set +del
+
+redis-cli -h localhost -p 6379 --user myuser -a mypassword
