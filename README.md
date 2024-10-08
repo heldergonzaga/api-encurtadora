@@ -104,3 +104,10 @@ npm i cache-manager-redis-store
 acl setuser redis >rootRedis on allchannels allkeys +get +set +del
 
 redis-cli -h localhost -p 6379 --user myuser -a mypassword
+
+
+Buscando as chaves no redis
+entre via docker 
+
+entra no Redis redis-cli
+keys *
