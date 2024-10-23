@@ -1,6 +1,13 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class CreateEncurtadoraDTO {
+
+  constructor(encurtadora: Partial<CreateEncurtadoraDTO>) {
+    this.id = encurtadora?.id;
+    this.term_origin = encurtadora?.term_origin;
+    this.term_target = encurtadora?.term_target;
+  }
+
   id?: string;
 
   @IsNotEmpty({
